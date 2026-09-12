@@ -7,11 +7,34 @@ import { ProjectVisual } from "@/components/ProjectVisual";
 import { SectionHeader } from "@/components/SectionHeader";
 
 export function FeaturedProjects() {
+  const handleCardMove = (event: React.PointerEvent<HTMLElement>) => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const card = event.currentTarget;
+    const bounds = card.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    card.style.setProperty("--tilt-x", `${y * -4}deg`);
+    card.style.setProperty("--tilt-y", `${x * 5}deg`);
+    card.style.setProperty("--shine-x", `${(x + 0.5) * 100}%`);
+    card.style.setProperty("--shine-y", `${(y + 0.5) * 100}%`);
+  };
+
+  const resetCard = (event: React.PointerEvent<HTMLElement>) => {
+    const card = event.currentTarget;
+    card.style.setProperty("--tilt-x", "0deg");
+    card.style.setProperty("--tilt-y", "0deg");
+    card.style.setProperty("--shine-x", "50%");
+    card.style.setProperty("--shine-y", "50%");
+  };
+
   return (
     <section className="section" id="work">
       <div className="container">
-        <SectionHeader kicker="Selected Work" title="Projects with product shape, not just repository links.">
-          Five projects that show the range: full-stack products, cloud-backed systems, AI pipelines, and practical interfaces.
+       <SectionHeader
+  kicker="Selected Work"
+  title="Built with purpose. Crafted to stand out."
+>
+      A glimpse into what I build when the idea is worth pursuing.
         </SectionHeader>
         <div className="featured-list">
           {featuredProjects.map((project, index) => (
@@ -24,6 +47,8 @@ export function FeaturedProjects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.35 }}
+              onPointerMove={handleCardMove}
+              onPointerLeave={resetCard}
             >
               <div className="project-copy">
                 <p className="project-number">{project.categories.join(" / ")}</p>

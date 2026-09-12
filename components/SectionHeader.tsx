@@ -1,6 +1,6 @@
 type SectionHeaderProps = {
   kicker: string;
-  title: string;
+  title: React.ReactNode;
   children?: React.ReactNode;
 };
 

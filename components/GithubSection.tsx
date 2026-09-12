@@ -6,12 +6,12 @@ export function GithubSection() {
     <section className="github-band">
       <div className="container github-grid">
         <div>
-          <p className="section-kicker">Built in Public</p>
-          <h2>Always learning. Always shipping.</h2>
-          <p>
-            Public projects show a steady arc across full-stack applications, cloud systems, mobile apps, and AI
-            tooling.
-          </p>
+         <p className="section-kicker">The Craft</p>
+<h2>Built through curiosity. Refined through practice.</h2>
+<p>
+  Every project is an opportunity to explore, experiment, and turn what I learn into
+  something meaningful.
+</p>
           <a className="button primary small" href={profile.github} target="_blank" rel="noreferrer">
             <Github size={16} /> @{profile.handle}
           </a>
