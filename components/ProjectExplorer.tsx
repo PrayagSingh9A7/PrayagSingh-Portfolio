@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { compactProjects, type ProjectCategory } from "@/data/projects";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -37,9 +38,15 @@ export function ProjectExplorer() {
           {visible.map((project) => (
             <article className="compact-card" key={project.name}>
               <div className={`project-thumb ${project.categories[0].toLowerCase()}`} aria-hidden="true">
-                <span />
-                <span />
-                <span />
+                {project.image ? (
+                  <Image src={project.image} alt="" fill sizes="(max-width: 700px) 100vw, 30vw" />
+                ) : (
+                  <>
+                    <span />
+                    <span />
+                    <span />
+                  </>
+                )}
               </div>
               <div>
                 <span>{project.categories.join(" / ")}</span>

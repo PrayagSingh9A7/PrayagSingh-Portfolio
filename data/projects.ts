@@ -9,7 +9,7 @@ export type FeaturedProject = {
   proof: string[];
   stack: string[];
   flow: string[];
-  image: string;
+  image?: string;
 }
 
 export type CompactProject = {
@@ -19,6 +19,7 @@ export type CompactProject = {
   categories: ProjectCategory[];
   description: string;
   stack: string[];
+  image?: string;
 };
 
 export const featuredProjects: FeaturedProject[] = [
@@ -36,22 +37,23 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["React", "Vite", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Socket.IO"],
     flow: ["Discovery", "Auth", "Listings", "Chat", "Recommendations"],
-   image: "/projects/rentify.webp"
+   image: "/projects/rentify.png"
   },
   {
-    title: "Retail Analytics & Store Intelligence Platform",
-    repo: "https://github.com/PrayagSingh9A7/Retail-Analytics-And-Store-Intelligence-Platform",
-    categories: ["AI"],
+    title: "QuickBite",
+    repo: "https://github.com/PrayagSingh9A7/QuickBite",
+    live: "https://quick-bite-inky-two.vercel.app",
+    categories: ["Web"],
     summary:
-      "A CCTV-based store intelligence pipeline that processes footage into operational metrics including footfall, dwell time, zone analytics, funnels, and anomaly detection.",
+      "A full-stack MERN food delivery application with authentication, browsing, cart flows, order management, an admin dashboard, and responsive UI.",
     proof: [
-      "Processes CCTV footage for people detection and tracking",
-      "Reports footfall, dwell time, zones, funnels, events, and anomalies",
-      "Uses YOLOv8-nano with an OpenCV HOG fallback and asynchronous processing"
+      "JWT authentication for secure user flows",
+      "Cart and order management across the shopping flow",
+      "Admin dashboard support for food delivery operations"
     ],
-    stack: ["Python", "FastAPI", "OpenCV", "YOLO", "Docker"],
-    flow: ["CCTV", "Tracking", "Metrics", "Funnels"],
-    image: "/projects/retail-analytics.webp"
+    stack: ["React", "Vite", "Node.js", "Express", "MongoDB"],
+    flow: ["Browse", "Cart", "Orders", "Admin"],
+    image: "/projects/quick.png"
   },
   {
     title: "TaskSphere Cloud",
@@ -69,20 +71,19 @@ export const featuredProjects: FeaturedProject[] = [
     image: "/projects/tasksphere.webp"
   },
   {
-    title: "QuickBite",
-    repo: "https://github.com/PrayagSingh9A7/QuickBite",
-    live: "https://quick-bite-inky-two.vercel.app",
-    categories: ["Web"],
+    title: "ZestUp",
+    repo: "https://github.com/PrayagSingh9A7/ZestUp",
+    categories: ["Mobile"],
     summary:
-      "A full-stack MERN food delivery application with authentication, browsing, cart flows, order management, an admin dashboard, and responsive UI.",
+      "An Expo recipe app for browsing, searching, viewing cooking instructions, and saving favorite recipes locally.",
     proof: [
-      "JWT authentication for secure user flows",
-      "Cart and order management across the shopping flow",
-      "Admin dashboard support for food delivery operations"
+      "Recipe discovery with search and detail views",
+      "Step-by-step cooking instructions for a focused mobile flow",
+      "Local favorites with React Native and Expo navigation"
     ],
-    stack: ["React", "Vite", "Node.js", "Express", "MongoDB"],
-    flow: ["Browse", "Cart", "Orders", "Admin"],
-    image: "/projects/quickbite.webp"
+    stack: ["React Native", "Expo", "AsyncStorage", "Navigation"],
+    flow: ["Discover", "Search", "Cook", "Favorites"],
+    image: "/projects/zest.png"
   },
   {
     title: "ExpenseFlow",
@@ -98,7 +99,7 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     stack: ["React", "Vite", "Charts", "Local Storage"],
     flow: ["Transactions", "Filters", "Analytics", "Charts"],
-   image: "/projects/expenseflow.webp"
+   image: "/projects/expenseflowweb.png"
   }
 ];
 
@@ -110,73 +111,28 @@ export const compactProjects: CompactProject[] = [
     categories: ["Web"],
     description:
       "Full-stack rental platform for PGs, flats, rooms, and roommate discovery with auth, filters, chat, and AI-assisted recommendations.",
-    stack: ["React", "Node.js", "MongoDB", "Socket.IO"]
+    stack: ["React", "Node.js", "MongoDB", "Socket.IO"],
+    image: "/projects/rentify.webp"
   },
-  {
-    name: "Retail Analytics",
-    repo: "https://github.com/PrayagSingh9A7/Retail-Analytics-And-Store-Intelligence-Platform",
-    categories: ["AI"],
-    description:
-      "CCTV-based store intelligence pipeline for people tracking, footfall, dwell time, funnels, zones, and anomalies.",
-    stack: ["Python", "FastAPI", "OpenCV", "YOLO"]
-  },
-  {
-    name: "TaskSphere Cloud",
-    repo: "https://github.com/PrayagSingh9A7/cloud-task-manager",
-    categories: ["Cloud", "Web"],
-    description:
-      "Cloud-powered task manager with JWT auth, task CRUD, calendar views, analytics, and IBM Cloudant storage.",
-    stack: ["React", "Express", "TypeScript", "IBM Cloudant"]
-  },
-  {
-    name: "AI Drive File Discovery Agent",
-    repo: "https://github.com/PrayagSingh9A7/ai-drive-file-discovery-agent",
-    categories: ["AI"],
-    description:
-      "Natural-language Google Drive file discovery agent using FastAPI, LangChain, Google Drive API, Groq, and Streamlit.",
-    stack: ["FastAPI", "LangChain", "Drive API", "Groq"]
-  },
-  {
+   {
     name: "QuickBite",
     repo: "https://github.com/PrayagSingh9A7/QuickBite",
     live: "https://quick-bite-inky-two.vercel.app",
     categories: ["Web"],
     description:
       "MERN food delivery app with JWT auth, browsing, cart, orders, admin dashboard, and Cloudinary uploads.",
-    stack: ["React", "Node.js", "Express", "MongoDB"]
+    stack: ["React", "Node.js", "Express", "MongoDB"],
+    image: "/projects/quickbite.webp"
   },
+ 
   {
-    name: "ExpenseFlowWeb",
-    repo: "https://github.com/PrayagSingh9A7/ExpenseFlowWeb",
-    live: "https://expense-flow-web.vercel.app/",
-    categories: ["Web"],
+    name: "TaskSphere Cloud",
+    repo: "https://github.com/PrayagSingh9A7/cloud-task-manager",
+    categories: ["Cloud", "Web"],
     description:
-      "Responsive expense tracker with transaction management, analytics, charts, filtering, and local storage.",
-    stack: ["React", "Vite", "Charts", "Local Storage"],
-    
-  },
-  {
-    name: "Smart Leads Dashboard",
-    repo: "https://github.com/PrayagSingh9A7/smart-leads-dashboard",
-    categories: ["Web"],
-    description: "Lead-focused dashboard project; repository details were limited in public preview.",
-    stack: ["React", "Dashboard UI"]
-  },
-  {
-    name: "Movie Explorer",
-    repo: "https://github.com/PrayagSingh9A7/movie-explorer-app",
-    categories: ["Mobile"],
-    description:
-      "React Native movie explorer with TypeScript, Redux Toolkit, search, pagination, and persisted favorites.",
-    stack: ["React Native", "TypeScript", "Redux Toolkit", "AsyncStorage"]
-  },
-  {
-    name: "ZestUp",
-    repo: "https://github.com/PrayagSingh9A7/ZestUp",
-    categories: ["Mobile"],
-    description:
-      "Expo recipe app for browsing, searching, viewing cooking instructions, and saving favorites locally.",
-    stack: ["React Native", "Expo", "AsyncStorage", "Navigation"]
+      "Cloud-powered task manager with JWT auth, task CRUD, calendar views, analytics, and IBM Cloudant storage.",
+    stack: ["React", "Express", "TypeScript", "IBM Cloudant"],
+    image: "/projects/tasksphere.webp"
   },
   {
     name: "NewsWeb",
@@ -185,7 +141,8 @@ export const compactProjects: CompactProject[] = [
     categories: ["Web"],
     description:
       "Responsive React news web app with category filtering, real-time news updates, and optimized UI.",
-    stack: ["React", "Vite", "NewsAPI"]
+    stack: ["React", "Vite", "NewsAPI"],
+    image: "/projects/newsweb.png"
   },
   
   {
@@ -195,15 +152,74 @@ export const compactProjects: CompactProject[] = [
     categories: ["Web"],
     description:
       "Responsive weather web app with real-time API integration and a modern JavaScript interface.",
-    stack: ["HTML", "CSS", "JavaScript", "Weather API"]
+    stack: ["HTML", "CSS", "JavaScript", "Weather API"],
+    image: "/projects/waetherweb.png"
   },
+ 
+  {
+    name: "ExpenseFlowWeb",
+    repo: "https://github.com/PrayagSingh9A7/ExpenseFlowWeb",
+    live: "https://expense-flow-web.vercel.app/",
+    categories: ["Web"],
+    description:
+      "Responsive expense tracker with transaction management, analytics, charts, filtering, and local storage.",
+    stack: ["React", "Vite", "Charts", "Local Storage"],
+    image: "/projects/expenseflowweb.png"
+  },
+  {
+    name: "Smart Leads Dashboard",
+    repo: "https://github.com/PrayagSingh9A7/smart-leads-dashboard",
+    categories: ["Web"],
+    description: "Lead-focused dashboard project; repository details were limited in public preview.",
+    stack: ["React", "Dashboard UI"],
+    image: "/projects/smartlead.png"
+  },
+   {
+    name: "Retail Analytics",
+    repo: "https://github.com/PrayagSingh9A7/Retail-Analytics-And-Store-Intelligence-Platform",
+    categories: ["AI"],
+    description:
+      "CCTV-based store intelligence pipeline for people tracking, footfall, dwell time, funnels, zones, and anomalies.",
+    stack: ["Python", "FastAPI", "OpenCV", "YOLO"],
+    image: "/projects/retail-analytics.webp"
+  },
+  {
+    name: "Movie Explorer",
+    repo: "https://github.com/PrayagSingh9A7/movie-explorer-app",
+    categories: ["Mobile"],
+    description:
+      "React Native movie explorer with TypeScript, Redux Toolkit, search, pagination, and persisted favorites.",
+    stack: ["React Native", "TypeScript", "Redux Toolkit", "AsyncStorage"],
+    image: "/projects/movieexplorer.png"
+  },
+  
+  {
+    name: "AI Drive File Discovery Agent",
+    repo: "https://github.com/PrayagSingh9A7/ai-drive-file-discovery-agent",
+    categories: ["AI"],
+    description:
+      "Natural-language Google Drive file discovery agent using FastAPI, LangChain, Google Drive API, Groq, and Streamlit.",
+    stack: ["FastAPI", "LangChain", "Drive API", "Groq"],
+    image: "/projects/aidiscoveryagent.png"
+  },
+  {
+    name: "ZestUp",
+    repo: "https://github.com/PrayagSingh9A7/ZestUp",
+    categories: ["Mobile"],
+    description:
+      "Expo recipe app for browsing, searching, viewing cooking instructions, and saving favorites locally.",
+    stack: ["React Native", "Expo", "AsyncStorage", "Navigation"],
+    image: "/projects/zestup.webp"
+  },
+  
   {
     name: "NovaNews",
     repo: "https://github.com/PrayagSingh9A7/NovaNews",
-    categories: ["Web"],
+    categories: ["Mobile"],
     description:
       "News application focused on trending stories, fresh updates, and real-time headlines.",
-    stack: ["TypeScript", "News"]
+    stack: ["TypeScript", "News"],
+    image: "/projects/novanews.png"
   },
   {
     name: "SkyNiq",
@@ -211,7 +227,8 @@ export const compactProjects: CompactProject[] = [
     categories: ["Mobile"],
     description:
       "React Native weather app with city search, auto-suggest, maps, forecast details, and OpenWeather integration.",
-    stack: ["React Native", "Expo", "OpenWeather", "Maps"]
+    stack: ["React Native", "Expo", "OpenWeather", "Maps"],
+    image: "/projects/skyniq.png"
   },
   {
     name: "HabitPulse",
@@ -219,6 +236,7 @@ export const compactProjects: CompactProject[] = [
     categories: ["Mobile"],
     description:
       "React Native habit tracker for daily tasks, completion history, percentages, and growth charts.",
-    stack: ["React Native", "Charts", "Local History"]
+    stack: ["React Native", "Charts", "Local History"],
+    image: "/projects/habitpulse.png"
   }
 ];

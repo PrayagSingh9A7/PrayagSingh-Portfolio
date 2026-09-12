@@ -6,9 +6,13 @@ export function Experience() {
   return (
     <section className="section" id="experience">
       <div className="container">
-        <SectionHeader kicker="Experience" title="Cloud training with practical systems context.">
-          Practical cloud training, architecture fundamentals, and deployment-focused learning.
-        </SectionHeader>
+        <SectionHeader
+  kicker="Experience"
+  title={<>From cloud fundamentals to real-world systems.</>}
+>
+  Hands-on experience with IBM Cloud, infrastructure, deployment, and the foundations
+  behind building reliable, scalable systems.
+</SectionHeader>
         <div className="timeline">
           {experience.map((item) => (
             <article className="timeline-item" key={item.company}>
