@@ -112,7 +112,7 @@ export const compactProjects: CompactProject[] = [
     description:
       "Full-stack rental platform for PGs, flats, rooms, and roommate discovery with auth, filters, chat, and AI-assisted recommendations.",
     stack: ["React", "Node.js", "MongoDB", "Socket.IO"],
-    image: "/projects/rentify.webp"
+    image: "/projects/rentify.png"
   },
    {
     name: "QuickBite",
