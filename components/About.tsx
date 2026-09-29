@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 const facts = [
   { value: "9.03", label: "CGPA" },
   { value: "AIR 8659", label: "GATE CSE 2026" },
-  { value: "14+", label: "Public repositories" },
+  { value: "18+", label: "Public repositories" },
   { value: "200+", label: "DSA problems" }
 ];
 

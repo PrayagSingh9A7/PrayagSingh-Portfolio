@@ -17,7 +17,7 @@ export function GithubSection() {
           </a>
         </div>
         <div className="github-panel" aria-label="GitHub activity representation">
-          <div><Github size={18} /><span>14+ public repositories referenced</span></div>
+          <div><Github size={18} /><span>18+ public repositories referenced</span></div>
           <div><GitPullRequestArrow size={18} /><span>Project-first learning trail</span></div>
           <div><Star size={18} /><span>Full-stack, mobile, cloud, and AI builds</span></div>
         </div>

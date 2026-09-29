@@ -24,6 +24,39 @@ export type CompactProject = {
 
 export const featuredProjects: FeaturedProject[] = [
   {
+  title: "CodeRoom",
+  repo: "https://github.com/PrayagSingh9A7/CodeRoom",
+  live: "https://code-room-opal.vercel.app",
+  categories: ["Web", "Cloud"],
+  summary:
+    "A collaborative coding and cloud execution platform for pair programming, technical interviews, team coding, challenge evaluation, and session replay.",
+  proof: [
+    "Real-time multi-user editing with presence, cursor awareness, multi-file workspaces, and role-aware rooms",
+    "12-step asynchronous execution pipeline using Redis/BullMQ and Docker sandboxes for isolated code execution",
+    "PostgreSQL persistence with Prisma, public and hidden test evaluation, run history, and replay-oriented session review"
+  ],
+  stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "Redis",
+    "BullMQ",
+    "Docker",
+    "Yjs",
+    "WebSockets"
+  ],
+  flow: [
+    "Collaboration",
+    "Rooms",
+    "Challenges",
+    "Execution",
+    "Replay"
+  ],
+  image: "/projects/coderoom.png"
+},
+  {
     title: "Rentify",
     repo: "https://github.com/PrayagSingh9A7/Rentify",
     live: "https://rentify-web-delta.vercel.app",
@@ -104,6 +137,29 @@ export const featuredProjects: FeaturedProject[] = [
 ];
 
 export const compactProjects: CompactProject[] = [
+  {
+  name: "CodeRoom",
+  repo: "https://github.com/PrayagSingh9A7/CodeRoom",
+  live: "https://code-room-opal.vercel.app",
+  categories: ["Web", "Cloud"],
+  description:
+    "A collaborative coding and cloud execution platform for pair programming, technical interviews, team coding, challenge evaluation, and session replay.",
+  
+  stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "Redis",
+    "BullMQ",
+    "Docker",
+    "Yjs",
+    "WebSockets"
+  ],
+  
+  image: "/projects/coderoom.png"
+},
   {
     name: "Rentify",
     repo: "https://github.com/PrayagSingh9A7/Rentify",

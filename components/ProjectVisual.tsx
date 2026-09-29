@@ -10,15 +10,18 @@ export function ProjectVisual({ project }: ProjectVisualProps) {
     <aside className={`project-visual ${project.image ? "" : "project-visual--mobile"}`} aria-label={`${project.title} project preview`}>
       <div className="project-visual-shadow" aria-hidden="true" />
       <div className="project-visual-backplate" aria-hidden="true" />
-      <div className="project-image-frame">
-        {project.image ? (
-          <Image
-            src={project.image}
-            alt={`${project.title} project preview`}
-            fill
-            sizes="(max-width: 900px) 100vw, 50vw"
-            className={`project-image project-image--${project.title.toLowerCase().replace(/\s+/g, "-")}`}
-          />
+     <div className="project-image-frame project-image-scroll">
+  {project.image ? (
+    <Image
+      src={project.image}
+      alt={`${project.title} project preview`}
+      width={1800}
+      height={1100}
+      sizes="(max-width: 900px) 100vw, 50vw"
+      className={`project-image project-image--${project.title
+        .toLowerCase()
+        .replace(/\s+/g, "-")}`}
+    />
         ) : (
           <div className="mobile-project-preview" aria-hidden="true">
             <div className="mobile-project-screen">
