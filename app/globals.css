@@ -2613,3 +2613,105 @@ main > .section:nth-of-type(even),
   color: var(--gold);
   font-weight: 600;
 }
+
+.project-image-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(25, 55, 110, 0.35) transparent;
+}
+
+.project-image-scroll .project-image {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  min-width: max-content;
+}
+.project-image-scroll::-webkit-scrollbar {
+
+  height: 6px;
+
+  width: 0;
+
+}
+
+
+
+.project-image-scroll::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+
+
+.project-image-scroll::-webkit-scrollbar-thumb {
+
+  background: rgba(226, 232, 233, 0.35);
+
+  border-radius: 999px;
+
+}
+
+
+
+.project-image-scroll::-webkit-scrollbar-thumb:hover {
+
+  background: rgba(236, 237, 239, 0.5);
+
+}
+
+.project-thumb {
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: rgba(218, 221, 227, 0.3) transparent;
+
+}
+
+
+
+.project-library-image {
+
+  display: block;
+
+  width: auto;
+
+  height: 100%;
+
+  max-width: none;
+
+  min-width: max-content;
+
+}
+
+.project-thumb::-webkit-scrollbar {
+
+  height: 5px;
+
+  width: 0;
+
+}
+
+
+
+.project-thumb::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+
+
+.project-thumb::-webkit-scrollbar-thumb {
+
+  background: rgba(113, 223, 217, 0.903);
+
+  border-radius: 999px;
+
+}
