@@ -138,17 +138,13 @@ export const featuredProjects: FeaturedProject[] = [
 
 export const compactProjects: CompactProject[] = [
   {
-  title: "CodeRoom",
+  name: "CodeRoom",
   repo: "https://github.com/PrayagSingh9A7/CodeRoom",
   live: "https://code-room-opal.vercel.app",
   categories: ["Web", "Cloud"],
-  summary:
+  description:
     "A collaborative coding and cloud execution platform for pair programming, technical interviews, team coding, challenge evaluation, and session replay.",
-  proof: [
-    "Real-time multi-user editing with presence, cursor awareness, multi-file workspaces, and role-aware rooms",
-    "12-step asynchronous execution pipeline using Redis/BullMQ and Docker sandboxes for isolated code execution",
-    "PostgreSQL persistence with Prisma, public and hidden test evaluation, run history, and replay-oriented session review"
-  ],
+  
   stack: [
     "Next.js",
     "React",
@@ -161,13 +157,7 @@ export const compactProjects: CompactProject[] = [
     "Yjs",
     "WebSockets"
   ],
-  flow: [
-    "Collaboration",
-    "Rooms",
-    "Challenges",
-    "Execution",
-    "Replay"
-  ],
+  
   image: "/projects/coderoom.png"
 },
   {
