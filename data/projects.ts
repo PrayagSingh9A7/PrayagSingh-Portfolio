@@ -73,6 +73,36 @@ export const featuredProjects: FeaturedProject[] = [
    image: "/projects/rentify.png"
   },
   {
+  title: "Codebase Intelligence",
+  repo: "https://github.com/PrayagSingh9A7/codebase-intelligence-platform",
+  live: "https://codebase-intelligence-platform-sand.vercel.app",
+  categories: ["AI", "Web"],
+  summary:
+    "A GenAI-powered codebase analysis platform for exploring GitHub repositories, dependencies, architecture, and codebase-aware questions.",
+  proof: [
+    "GitHub repository ingestion with language detection, entrypoint analysis, and file-level dependency mapping",
+    "Retrieval pipeline using 384-dimensional feature-hashed vectors, cosine similarity, and lexical/intent reranking",
+    "OpenAI-powered codebase chat with interactive repository visualization using React Three Fiber"
+  ],
+  stack: [
+    "Next.js",
+    "TypeScript",
+    "FastAPI",
+    "Python",
+    "OpenAI API",
+    "NumPy",
+    "React Three Fiber"
+  ],
+  flow: [
+    "Ingest",
+    "Analyze",
+    "Retrieve",
+    "Explore",
+    "Chat"
+  ],
+    image: "/projects/codebase-intelligence.png"
+},
+  {
     title: "QuickBite",
     repo: "https://github.com/PrayagSingh9A7/QuickBite",
     live: "https://quick-bite-inky-two.vercel.app",
@@ -88,21 +118,21 @@ export const featuredProjects: FeaturedProject[] = [
     flow: ["Browse", "Cart", "Orders", "Admin"],
     image: "/projects/quick.png"
   },
-  {
-    title: "TaskSphere Cloud",
-    repo: "https://github.com/PrayagSingh9A7/cloud-task-manager",
-    categories: ["Cloud", "Web"],
-    summary:
-      "A cloud-powered task management application with secure authentication, task workflows, calendar views, analytics, and persistent IBM Cloudant storage.",
-    proof: [
-      "Task CRUD, duplication, priority, status, category, search, and filters",
-      "Month, week, day, agenda, and upcoming task calendar views",
-      "Express REST API backed by IBM Cloudant NoSQL Database"
-    ],
-    stack: ["React", "Node.js", "Express", "TypeScript", "IBM Cloudant", "JWT"],
-    flow: ["Client", "API", "Auth", "Cloudant"],
-    image: "/projects/tasksphere.webp"
-  },
+  // {
+  //   title: "TaskSphere Cloud",
+  //   repo: "https://github.com/PrayagSingh9A7/cloud-task-manager",
+  //   categories: ["Cloud", "Web"],
+  //   summary:
+  //     "A cloud-powered task management application with secure authentication, task workflows, calendar views, analytics, and persistent IBM Cloudant storage.",
+  //   proof: [
+  //     "Task CRUD, duplication, priority, status, category, search, and filters",
+  //     "Month, week, day, agenda, and upcoming task calendar views",
+  //     "Express REST API backed by IBM Cloudant NoSQL Database"
+  //   ],
+  //   stack: ["React", "Node.js", "Express", "TypeScript", "IBM Cloudant", "JWT"],
+  //   flow: ["Client", "API", "Auth", "Cloudant"],
+  //   image: "/projects/tasksphere.webp"
+  // },
   {
     title: "ZestUp",
     repo: "https://github.com/PrayagSingh9A7/ZestUp",
@@ -118,22 +148,22 @@ export const featuredProjects: FeaturedProject[] = [
     flow: ["Discover", "Search", "Cook", "Favorites"],
     image: "/projects/zest.png"
   },
-  {
-    title: "ExpenseFlow",
-    repo: "https://github.com/PrayagSingh9A7/ExpenseFlowWeb",
-    live: "https://expense-flow-web.vercel.app/",
-    categories: ["Web"],
-    summary:
-      "A responsive expense tracker focused on transaction management, expense analytics, charts, filtering, and local-storage backed personal finance workflows.",
-    proof: [
-      "Transaction management with organized expense records",
-      "Expense analytics, charting, and filtering workflows",
-      "React/Vite interface with local storage persistence"
-    ],
-    stack: ["React", "Vite", "Charts", "Local Storage"],
-    flow: ["Transactions", "Filters", "Analytics", "Charts"],
-   image: "/projects/expenseflowweb.png"
-  }
+  // {
+  //   title: "ExpenseFlow",
+  //   repo: "https://github.com/PrayagSingh9A7/ExpenseFlowWeb",
+  //   live: "https://expense-flow-web.vercel.app/",
+  //   categories: ["Web"],
+  //   summary:
+  //     "A responsive expense tracker focused on transaction management, expense analytics, charts, filtering, and local-storage backed personal finance workflows.",
+  //   proof: [
+  //     "Transaction management with organized expense records",
+  //     "Expense analytics, charting, and filtering workflows",
+  //     "React/Vite interface with local storage persistence"
+  //   ],
+  //   stack: ["React", "Vite", "Charts", "Local Storage"],
+  //   flow: ["Transactions", "Filters", "Analytics", "Charts"],
+  //  image: "/projects/expenseflowweb.png"
+  // }
 ];
 
 export const compactProjects: CompactProject[] = [
@@ -170,6 +200,22 @@ export const compactProjects: CompactProject[] = [
     stack: ["React", "Node.js", "MongoDB", "Socket.IO"],
     image: "/projects/rentify.png"
   },
+  {
+  name: "Codebase Intelligence",
+  repo: "https://github.com/PrayagSingh9A7/codebase-intelligence-platform",
+  live: "https://codebase-intelligence-platform-sand.vercel.app",
+  categories: ["AI", "Web"],
+  description:
+    "GenAI-powered codebase analyzer for GitHub repository ingestion, dependency exploration, retrieval, and codebase-aware chat.",
+  stack: [
+    "Next.js",
+    "FastAPI",
+    "Python",
+    "OpenAI",
+    "NumPy"
+  ],
+  image: "/projects/codebase-intelligence.png"
+},
    {
     name: "QuickBite",
     repo: "https://github.com/PrayagSingh9A7/QuickBite",
