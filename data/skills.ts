@@ -36,6 +36,15 @@ export const skillGroups = [
     ]
   },
   {
+    title: "GenAI",
+    items: [
+      "Generative AI",
+      "LLMs",
+      "Prompt Engineering",
+      "OpenAI API"
+    ]
+  },
+  {
     title: "Databases",
     items: [
       "MongoDB",
@@ -83,13 +92,13 @@ export const skillGroups = [
     ]
   },
   {
-  title: "Real-Time & Infrastructure",
-  items: [
-    "Yjs",
-    "WebSockets",
-    "BullMQ",
-    "Prisma",
-    "Docker Sandboxing"
-  ]
-}
+    title: "Real-Time & Infrastructure",
+    items: [
+      "Yjs",
+      "WebSockets",
+      "BullMQ",
+      "Prisma",
+      "Docker Sandboxing"
+    ]
+  }
 ];
